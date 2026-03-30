@@ -63,7 +63,7 @@ export default function Services() {
       <section className="svc-list section">
         <div className="container">
           {services.map((s, i) => (
-            <div key={s.num} className={`svc-item ${i % 2 === 1 ? 'svc-item--alt' : ''}`}>
+            <div key={s.num} className="svc-item">
               <div className="svc-item-header">
                 <span className="svc-item-num">{s.num}</span>
                 <div>

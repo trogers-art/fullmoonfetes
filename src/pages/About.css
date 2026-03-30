@@ -1,0 +1,64 @@
+.about-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 64px;
+  align-items: start;
+}
+
+.about-hero-content { display: flex; flex-direction: column; gap: 16px; }
+.about-hero-content h1 em { font-style: italic; color: var(--color-purple-mid); }
+
+.about-photo-wrap { margin-bottom: 20px; }
+.about-photo {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+}
+.about-photo-placeholder {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: var(--color-bg-panel);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--color-purple);
+  display: flex; align-items: center; justify-content: center;
+}
+.about-photo-placeholder span {
+  font-family: var(--font-sans); font-size: 11px;
+  letter-spacing: 1px; text-transform: uppercase;
+  color: var(--color-purple);
+}
+
+.about-cred-list { display: flex; flex-direction: column; gap: 12px; }
+.about-cred-item {
+  display: flex; flex-direction: column; gap: 3px;
+  padding-bottom: 12px;
+  border-bottom: 0.5px solid var(--color-border);
+}
+.about-cred-item:last-child { border-bottom: none; }
+.about-cred-label {
+  font-family: var(--font-sans); font-size: 10px;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--color-purple);
+}
+.about-cred-value {
+  font-family: var(--font-sans); font-size: 13px;
+  color: var(--color-text);
+}
+
+.about-philosophy {
+  background: var(--color-bg-dark);
+  border-top: 1px solid var(--color-border);
+}
+.about-philosophy .eyebrow { color: var(--color-purple); }
+.about-philosophy h2 { color: var(--color-bg); margin-bottom: 32px; }
+.about-philosophy h2 em { color: var(--color-purple-light); font-style: italic; }
+.about-philosophy-cols {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+}
+.about-philosophy-cols p { color: var(--color-purple-light); font-size: 14px; line-height: 1.8; }
+
+@media (max-width: 900px) {
+  .about-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .about-philosophy-cols { grid-template-columns: 1fr; gap: 20px; }
+}

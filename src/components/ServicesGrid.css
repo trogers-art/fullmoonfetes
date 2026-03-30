@@ -1,0 +1,107 @@
+.svc-section {
+  background: var(--color-bg-light);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.svc-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 0.5px solid var(--color-border);
+}
+.svc-section-header h2 em {
+  font-style: italic;
+  color: var(--color-purple-mid);
+}
+
+.svc-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1px;
+  background: var(--color-border);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.svc-card {
+  background: var(--color-bg-light);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.svc-card--featured {
+  background: var(--color-bg-dark);
+}
+
+.svc-num {
+  font-family: var(--font-serif);
+  font-size: 12px;
+  font-style: italic;
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+}
+.svc-card--featured .svc-num { color: #5a4878; }
+
+.svc-rule {
+  width: 28px;
+  height: 2px;
+  background: var(--color-purple-light);
+  border-radius: 1px;
+  margin-bottom: 16px;
+}
+.svc-card--featured .svc-rule { background: #5a3a8a; }
+
+.svc-title {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+.svc-card--featured .svc-title { color: var(--color-bg); }
+
+.svc-desc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--color-text-body);
+  margin-bottom: 16px;
+  flex: 1;
+}
+.svc-card--featured .svc-desc { color: var(--color-purple-light); }
+
+.svc-price {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-purple);
+  margin-bottom: 20px;
+}
+.svc-card--featured .svc-price { color: #a090c8; }
+
+.svc-cta {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-purple);
+  border-top: 0.5px solid var(--color-border);
+  padding-top: 16px;
+  margin-top: auto;
+  transition: opacity 0.2s;
+}
+.svc-cta:hover { opacity: 0.7; }
+.svc-card--featured .svc-cta {
+  color: var(--color-purple-light);
+  border-top-color: #3d2860;
+}
+
+@media (max-width: 768px) {
+  .svc-grid { grid-template-columns: 1fr; }
+  .svc-section-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+}

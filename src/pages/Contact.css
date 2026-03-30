@@ -1,0 +1,42 @@
+.contact-hero { border-bottom: 1px solid var(--color-border); }
+.contact-hero-inner {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 64px; align-items: start;
+}
+.contact-info h1 em { font-style: italic; color: var(--color-purple-mid); }
+.contact-info p { margin-top: 16px; font-size: 14px; max-width: 420px; }
+
+.contact-details {
+  display: flex; flex-direction: column; gap: 16px;
+  margin-top: 36px; margin-bottom: 28px;
+}
+.contact-detail-item { display: flex; flex-direction: column; gap: 3px; }
+.contact-detail-label {
+  font-family: var(--font-sans); font-size: 10px;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--color-purple);
+}
+.contact-detail-item a,
+.contact-detail-item span {
+  font-family: var(--font-sans); font-size: 14px; color: var(--color-text);
+}
+.contact-detail-item a { transition: color 0.2s; }
+.contact-detail-item a:hover { color: var(--color-purple); }
+
+.contact-note {
+  font-size: 12px !important;
+  color: var(--color-text-muted) !important;
+  font-style: italic;
+  max-width: 360px;
+}
+
+.contact-calendly {
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .contact-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+}

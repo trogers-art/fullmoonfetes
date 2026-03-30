@@ -1,0 +1,98 @@
+.nav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.nav-logo-link { display: flex; align-items: center; }
+.nav-logo { height: 52px; width: auto; object-fit: contain; }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #3a2a18;
+  transition: color 0.2s;
+}
+.nav-link:hover,
+.nav-link--active { color: var(--color-purple); }
+
+.nav-cta {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: var(--color-bg-dark);
+  color: var(--color-bg);
+  padding: 9px 20px;
+  border-radius: var(--radius-sm);
+  transition: opacity 0.2s;
+}
+.nav-cta:hover { opacity: 0.85; }
+
+/* Burger — hidden on desktop */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.nav-burger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--color-text);
+  transition: transform 0.2s, opacity 0.2s;
+}
+.nav-burger--open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-burger--open span:nth-child(2) { opacity: 0; }
+.nav-burger--open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+@media (max-width: 768px) {
+  .nav-burger { display: flex; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    padding: 16px 20px 24px;
+  }
+  .nav-links--open { display: flex; }
+
+  .nav-link {
+    padding: 12px 0;
+    width: 100%;
+    border-bottom: 0.5px solid var(--color-border);
+  }
+  .nav-cta {
+    margin-top: 16px;
+    align-self: stretch;
+    text-align: center;
+  }
+}

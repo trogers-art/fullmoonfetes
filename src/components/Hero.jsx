@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo-fmf.png'
-// import headshot from '../assets/headshot.jpg' // ← uncomment when Victoria sends photo
+import headshot from '../assets/gallery/Victoria-Hero.jpg'
 import './Hero.css'
 
 export default function Hero() {
@@ -25,12 +25,7 @@ export default function Hero() {
       </div>
 
       <div className="hero-right">
-        <img src={logo} alt="Full Moon Fetes" className="hero-logo" />
-        {/* Swap logo for headshot once received:
-        <img src={headshot} alt="Victoria Rogers" className="hero-headshot" /> */}
-        <div className="hero-headshot-placeholder">
-          <span>Headshot coming soon</span>
-        </div>
+        <img src={headshot} alt="Victoria Rogers" className="hero-headshot" />
       </div>
     </section>
   )

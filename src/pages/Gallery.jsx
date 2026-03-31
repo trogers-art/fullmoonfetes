@@ -1,18 +1,29 @@
 import './Gallery.css'
 
-// Photo imports — add Victoria's images to src/assets/gallery/ and import here
-// import img1 from '../assets/gallery/event-1.jpg'
-// Victoria's existing portfolio: Portfolio1–8 from fullmoonfetes.com
+import balloonArch1 from '../assets/gallery/balloon-arch-1.jpg'
+import balloonArch2 from '../assets/gallery/balloon-arch-2.png'
+import balloonArch3 from '../assets/gallery/balloon-arch-3.png'
+import event1 from '../assets/gallery/event-1.jpg'
+import event11 from '../assets/gallery/event-1-1.jpg'
+import event12 from '../assets/gallery/event-1-2.jpg'
+import event13 from '../assets/gallery/event-1-3.jpg'
+import event14 from '../assets/gallery/event-1-4.jpg'
+import event2 from '../assets/gallery/event-2.jpg'
+import weddingInvites1 from '../assets/gallery/wedding-invites-1.png'
+import weddingInvites2 from '../assets/gallery/wedding-invites-2.png'
 
 const photos = [
-  { id: 1, alt: 'Pastel balloon garland with marquee number', src: null },
-  { id: 2, alt: 'Custom themed cake topper', src: null },
-  { id: 3, alt: 'Balloon column for birthday celebration', src: null },
-  { id: 4, alt: 'Custom party favor bags and buttons', src: null },
-  { id: 5, alt: 'Cherry themed balloon backdrop', src: null },
-  { id: 6, alt: 'Cherry balloon centerpieces', src: null },
-  { id: 7, alt: 'Event setup and balloon decoration', src: null },
-  { id: 8, alt: 'Balloon installation process', src: null },
+  { id: 1,  src: balloonArch1,    alt: 'Custom balloon arch installation' },
+  { id: 2,  src: balloonArch2,    alt: 'Balloon arch decor' },
+  { id: 3,  src: balloonArch3,    alt: 'Balloon arch display' },
+  { id: 4,  src: event1,          alt: 'Full event setup and decor' },
+  { id: 5,  src: event11,         alt: 'Event decoration detail' },
+  { id: 6,  src: event12,         alt: 'Event styling' },
+  { id: 7,  src: event13,         alt: 'Event decor and planning' },
+  { id: 8,  src: event14,         alt: 'Event installation' },
+  { id: 9,  src: event2,          alt: 'Celebration setup' },
+  { id: 10, src: weddingInvites1, alt: 'Custom wedding invitation design' },
+  { id: 11, src: weddingInvites2, alt: 'Wedding stationery detail' },
 ]
 
 export default function Gallery() {
@@ -38,13 +49,7 @@ export default function Gallery() {
           <div className="gallery-grid">
             {photos.map((photo) => (
               <div key={photo.id} className="gallery-item">
-                {photo.src ? (
-                  <img src={photo.src} alt={photo.alt} className="gallery-img" />
-                ) : (
-                  <div className="gallery-placeholder">
-                    <span>{photo.alt}</span>
-                  </div>
-                )}
+                <img src={photo.src} alt={photo.alt} className="gallery-img" />
               </div>
             ))}
           </div>

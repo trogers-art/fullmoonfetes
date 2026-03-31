@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import headshot from '../assets/gallery/Victoria-Hero.jpeg'
 import './About.css'
 
 const credentials = [
@@ -47,10 +48,7 @@ export default function About() {
 
           <div className="about-hero-aside">
             <div className="about-photo-wrap">
-              {/* <img src={headshot} alt="Victoria Rogers" className="about-photo" /> */}
-              <div className="about-photo-placeholder">
-                <span>Victoria's photo</span>
-              </div>
+              <img src={headshot} alt="Victoria Rogers" className="about-photo" />
             </div>
             <div className="about-cred-list">
               {credentials.map(({ label, value }) => (

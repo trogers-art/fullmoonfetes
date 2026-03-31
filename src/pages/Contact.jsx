@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import './Contact.css'
 
 // Replace with Victoria's actual Calendly URL once set up
-const CALENDLY_URL = 'https://calendly.com/fullmoonfetes'
+const CALENDLY_URL = 'https://calendly.com/party-fullmoonfetes/30min'
 
 export default function Contact() {
   useEffect(() => {

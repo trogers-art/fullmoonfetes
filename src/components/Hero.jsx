@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo-fmf.png'
-import headshot from '../assets/gallery/Victoria-Hero.jpg'
+import headshot from '../assets/gallery/Victoria-Hero.jpeg'
 import './Hero.css'
 
 export default function Hero() {
@@ -25,6 +25,7 @@ export default function Hero() {
       </div>
 
       <div className="hero-right">
+        <img src={logo} alt="Full Moon Fetes" className="hero-logo" />
         <img src={headshot} alt="Victoria Rogers" className="hero-headshot" />
       </div>
     </section>

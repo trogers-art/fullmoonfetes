@@ -25,18 +25,14 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to IONOS via FTP
+      - name: Deploy to IONOS via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          port: 22
-          sftp_only: true
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          local-dir: ./dist/
-          server-dir: /
-          dangerous-clean-slate: false
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
+          port: 22
+          local_path: ./dist/*
+          remote_path: /public_html
+          sftp_only: true
+          delete_remote_files: false
